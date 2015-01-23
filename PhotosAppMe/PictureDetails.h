@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "ImageCollectionViewCell.h"
 
 @interface PictureDetails : NSObject
 
@@ -16,5 +17,6 @@
 @property BOOL hasBeenFavorited;
 @property float latitude;
 @property float longitude;
+@property ImageCollectionViewCell *cellular;
 
 @end

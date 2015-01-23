@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSMutableArray *photosArray;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property NSIndexPath *path;
 
 
 
@@ -91,25 +92,39 @@
 {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     PictureDetails *picture = [self.photosArray objectAtIndex:indexPath.row];
+    picture.cellular = cell;
 
     NSURL *imageURL = [NSURL URLWithString:picture.photoUrl];
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    cell.cellImageView.image = [UIImage imageWithData:imageData];
+    picture.cellular.cellImageView.image = [UIImage imageWithData:imageData];
 
     if (picture.hasBeenFavorited)
     {
-        cell.accessoryImageView.image = [UIImage imageNamed:@"heart.png"];
+        picture.cellular.accessoryImageView.image = [UIImage imageNamed:@"heart.png"];
     }
 
     return cell;
 }
 
-- (IBAction)doubleTapped:(UITapGestureRecognizer *)sender
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSIndexPath *path = [self.collectionView indexPathForCell:sender];
-    Cities *thisCity = [self.photosArray objectAtIndex:path.row];
+    // If you need to use the touched cell, you can retrieve it like so
+    self.path = indexPath;
+    PictureDetails *picture = [self.photosArray objectAtIndex:self.path.row];
+    picture.hasBeenFavorited = YES;
+    picture.cellular.accessoryImageView.image = [UIImage imageNamed:@"heart.png"];
+    //[self.collectionView reloadData];
 
 }
+
+//- (IBAction)doubleTapped:(UITapGestureRecognizer *)sender
+//{
+//    PictureDetails *picture = [self.photosArray objectAtIndex:self.path.row];
+//    picture.hasBeenFavorited = YES;
+//    //ImageCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:self.path];
+//    [self.collectionView reloadData];
+//
+//}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

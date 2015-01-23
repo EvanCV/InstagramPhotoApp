@@ -156,7 +156,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="0" id="Ate-kM-SRx">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Ate-kM-SRx">
                     <connections>
                         <action selector="doubleTapped:" destination="9pv-A4-QxB" id="Gs4-4k-j2H"/>
                     </connections>

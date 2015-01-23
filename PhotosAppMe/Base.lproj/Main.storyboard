@@ -42,29 +42,58 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-qy-J6f">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <gestureRecognizers/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="329"/>
                                                     </variation>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Ate-kM-SRx" appends="YES" id="5v2-wh-Qpr"/>
+                                                    </connections>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-YB-016">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="284" y="0.0" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="9sq-hv-JwD"/>
+                                                        <constraint firstAttribute="width" constant="33" id="CMg-qC-EP2"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="9sq-hv-JwD"/>
+                                                            <exclude reference="CMg-qC-EP2"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="9sq-hv-JwD"/>
+                                                            <include reference="CMg-qC-EP2"/>
+                                                        </mask>
                                                     </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="dBH-YB-016" firstAttribute="top" secondItem="Iro-kU-2fy" secondAttribute="topMargin" constant="-8" id="YtW-Un-2Ev"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="dBH-YB-016" secondAttribute="trailing" constant="-8" id="yIe-3C-ptj"/>
+                                        </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="Ctq-qy-J6f"/>
                                                 <exclude reference="dBH-YB-016"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="YtW-Un-2Ev"/>
+                                                <exclude reference="yIe-3C-ptj"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="Ctq-qy-J6f"/>
                                                 <include reference="dBH-YB-016"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="YtW-Un-2Ev"/>
+                                                <include reference="yIe-3C-ptj"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -127,6 +156,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="0" id="Ate-kM-SRx">
+                    <connections>
+                        <action selector="doubleTapped:" destination="9pv-A4-QxB" id="Gs4-4k-j2H"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="583.5" y="-588"/>
         </scene>

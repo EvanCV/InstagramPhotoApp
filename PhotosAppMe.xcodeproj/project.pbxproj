@@ -19,6 +19,7 @@
 		83CC95801A71CC38000DE4A9 /* PictureDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC957F1A71CC38000DE4A9 /* PictureDetails.m */; };
 		83CC95821A71CE8E000DE4A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CC95811A71CE8E000DE4A9 /* MapKit.framework */; };
 		83CC95851A71E344000DE4A9 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */; };
+		83CC95871A71FA9F000DE4A9 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CC95861A71FA9F000DE4A9 /* heart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		83CC95811A71CE8E000DE4A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		83CC95831A71E344000DE4A9 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		83CC95861A71FA9F000DE4A9 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = ../../../../heart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		83CC95521A71CACF000DE4A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83CC95861A71FA9F000DE4A9 /* heart.png */,
 				83CC95531A71CACF000DE4A9 /* Info.plist */,
 				83CC95541A71CACF000DE4A9 /* main.m */,
 			);
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CC95871A71FA9F000DE4A9 /* heart.png in Resources */,
 				83CC95611A71CACF000DE4A9 /* Main.storyboard in Resources */,
 				83CC95661A71CACF000DE4A9 /* LaunchScreen.xib in Resources */,
 				83CC95631A71CACF000DE4A9 /* Images.xcassets in Resources */,

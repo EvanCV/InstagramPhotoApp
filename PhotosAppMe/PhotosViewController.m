@@ -96,8 +96,21 @@
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
     cell.cellImageView.image = [UIImage imageWithData:imageData];
 
+    if (picture.hasBeenFavorited)
+    {
+        cell.accessoryImageView.image = [UIImage imageNamed:@"heart.png"];
+    }
+
     return cell;
 }
+
+- (IBAction)doubleTapped:(UITapGestureRecognizer *)sender
+{
+    NSIndexPath *path = [self.collectionView indexPathForCell:sender];
+    Cities *thisCity = [self.photosArray objectAtIndex:path.row];
+
+}
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

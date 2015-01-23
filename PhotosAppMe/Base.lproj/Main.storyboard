@@ -46,20 +46,29 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="329"/>
                                                     </variation>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-YB-016">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="284" y="0.0" width="45" height="45"/>
+                                                    </variation>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="Ctq-qy-J6f"/>
+                                                <exclude reference="dBH-YB-016"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="Ctq-qy-J6f"/>
+                                                <include reference="dBH-YB-016"/>
                                             </mask>
                                         </variation>
                                         <connections>
+                                            <outlet property="accessoryImageView" destination="dBH-YB-016" id="O4W-bQ-GBT"/>
                                             <outlet property="cellImageView" destination="Ctq-qy-J6f" id="7Rk-3k-1HR"/>
                                         </connections>
                                     </collectionViewCell>

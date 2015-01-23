@@ -30,6 +30,8 @@
 
 -(void)parser:(NSString *)searchCriteria
 {
+    [self.photosArray removeAllObjects];
+
     NSString *currentURL = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?access_token=11102558.1fb234f.23a625c7878644a4aa531db7eed42c5a", searchCriteria];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:currentURL]];
@@ -38,11 +40,17 @@
          NSDictionary *dataArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
        //  NSLog(@"%@", self.photosArray);
 
+         int i = 0;
+
          NSArray *array = dataArray[@"data"];
 
          for (NSDictionary *currentDictionary in array)
          {
-             [self unpackDictionary:currentDictionary];
+             if (i < 10)
+             {
+                 [self unpackDictionary:currentDictionary];
+                 i++;
+             }
          }
 
         // [self reloadInputViews];
@@ -55,17 +63,13 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self parser:searchBar.text];
+    [searchBar resignFirstResponder];
 }
 
-//-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-//{
-//    [self parser:searchText];
-//}
 
 -(void)unpackDictionary:(NSDictionary *)dict
 {
     PictureDetails *picture = [PictureDetails new];
-
 
     NSDictionary *dd = dict[@"location"];
 
@@ -79,7 +83,6 @@
     NSDictionary *dd3 = dd2[@"standard_resolution"];
     picture.photoUrl = dd3[@"url"];
 
-
     [self.photosArray addObject:picture];
 }
 
@@ -92,8 +95,6 @@
     NSURL *imageURL = [NSURL URLWithString:picture.photoUrl];
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
     cell.cellImageView.image = [UIImage imageWithData:imageData];
-
-    //cell.cellImageView.image = [UIImage imageWithContentsOfFile:picture.photoUrl];
 
     return cell;
 }

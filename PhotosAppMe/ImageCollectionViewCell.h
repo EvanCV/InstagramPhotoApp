@@ -10,5 +10,6 @@
 
 @interface ImageCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *cellImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *accessoryImageView;
 
 @end

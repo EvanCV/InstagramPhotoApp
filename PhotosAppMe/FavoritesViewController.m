@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  PhotosAppMe
 //
 //  Created by Shannon Beck on 1/22/15.
 //  Copyright (c) 2015 Shannon Beck. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "FavoritesViewController.h"
 
-@interface FirstViewController ()
+@interface FavoritesViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation FavoritesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		83CC95551A71CACF000DE4A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC95541A71CACF000DE4A9 /* main.m */; };
 		83CC95581A71CACF000DE4A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC95571A71CACF000DE4A9 /* AppDelegate.m */; };
-		83CC955B1A71CACF000DE4A9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC955A1A71CACF000DE4A9 /* FirstViewController.m */; };
-		83CC955E1A71CACF000DE4A9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC955D1A71CACF000DE4A9 /* SecondViewController.m */; };
+		83CC955B1A71CACF000DE4A9 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC955A1A71CACF000DE4A9 /* PhotosViewController.m */; };
+		83CC955E1A71CACF000DE4A9 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC955D1A71CACF000DE4A9 /* FavoritesViewController.m */; };
 		83CC95611A71CACF000DE4A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CC955F1A71CACF000DE4A9 /* Main.storyboard */; };
 		83CC95631A71CACF000DE4A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CC95621A71CACF000DE4A9 /* Images.xcassets */; };
 		83CC95661A71CACF000DE4A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CC95641A71CACF000DE4A9 /* LaunchScreen.xib */; };
 		83CC95721A71CACF000DE4A9 /* PhotosAppMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC95711A71CACF000DE4A9 /* PhotosAppMeTests.m */; };
+		83CC957D1A71CBC8000DE4A9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC957C1A71CBC8000DE4A9 /* MapViewController.m */; };
+		83CC95801A71CC38000DE4A9 /* PictureDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC957F1A71CC38000DE4A9 /* PictureDetails.m */; };
+		83CC95821A71CE8E000DE4A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CC95811A71CE8E000DE4A9 /* MapKit.framework */; };
+		83CC95851A71E344000DE4A9 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +37,23 @@
 		83CC95541A71CACF000DE4A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83CC95561A71CACF000DE4A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83CC95571A71CACF000DE4A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83CC95591A71CACF000DE4A9 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		83CC955A1A71CACF000DE4A9 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		83CC955C1A71CACF000DE4A9 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		83CC955D1A71CACF000DE4A9 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		83CC95591A71CACF000DE4A9 /* PhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		83CC955A1A71CACF000DE4A9 /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		83CC955C1A71CACF000DE4A9 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		83CC955D1A71CACF000DE4A9 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		83CC95601A71CACF000DE4A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83CC95621A71CACF000DE4A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83CC95651A71CACF000DE4A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		83CC956B1A71CACF000DE4A9 /* PhotosAppMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosAppMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CC95701A71CACF000DE4A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CC95711A71CACF000DE4A9 /* PhotosAppMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosAppMeTests.m; sourceTree = "<group>"; };
+		83CC957B1A71CBC8000DE4A9 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		83CC957C1A71CBC8000DE4A9 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		83CC957E1A71CC38000DE4A9 /* PictureDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureDetails.h; sourceTree = "<group>"; };
+		83CC957F1A71CC38000DE4A9 /* PictureDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDetails.m; sourceTree = "<group>"; };
+		83CC95811A71CE8E000DE4A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		83CC95831A71E344000DE4A9 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CC95821A71CE8E000DE4A9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +78,7 @@
 		83CC95461A71CACF000DE4A9 = {
 			isa = PBXGroup;
 			children = (
+				83CC95811A71CE8E000DE4A9 /* MapKit.framework */,
 				83CC95511A71CACF000DE4A9 /* PhotosAppMe */,
 				83CC956E1A71CACF000DE4A9 /* PhotosAppMeTests */,
 				83CC95501A71CACF000DE4A9 /* Products */,
@@ -86,11 +99,17 @@
 			children = (
 				83CC95561A71CACF000DE4A9 /* AppDelegate.h */,
 				83CC95571A71CACF000DE4A9 /* AppDelegate.m */,
-				83CC95591A71CACF000DE4A9 /* FirstViewController.h */,
-				83CC955A1A71CACF000DE4A9 /* FirstViewController.m */,
-				83CC955C1A71CACF000DE4A9 /* SecondViewController.h */,
-				83CC955D1A71CACF000DE4A9 /* SecondViewController.m */,
 				83CC955F1A71CACF000DE4A9 /* Main.storyboard */,
+				83CC95831A71E344000DE4A9 /* ImageCollectionViewCell.h */,
+				83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */,
+				83CC95591A71CACF000DE4A9 /* PhotosViewController.h */,
+				83CC955A1A71CACF000DE4A9 /* PhotosViewController.m */,
+				83CC955C1A71CACF000DE4A9 /* FavoritesViewController.h */,
+				83CC955D1A71CACF000DE4A9 /* FavoritesViewController.m */,
+				83CC957E1A71CC38000DE4A9 /* PictureDetails.h */,
+				83CC957F1A71CC38000DE4A9 /* PictureDetails.m */,
+				83CC957B1A71CBC8000DE4A9 /* MapViewController.h */,
+				83CC957C1A71CBC8000DE4A9 /* MapViewController.m */,
 				83CC95621A71CACF000DE4A9 /* Images.xcassets */,
 				83CC95641A71CACF000DE4A9 /* LaunchScreen.xib */,
 				83CC95521A71CACF000DE4A9 /* Supporting Files */,
@@ -224,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CC955E1A71CACF000DE4A9 /* SecondViewController.m in Sources */,
+				83CC955E1A71CACF000DE4A9 /* FavoritesViewController.m in Sources */,
+				83CC95851A71E344000DE4A9 /* ImageCollectionViewCell.m in Sources */,
 				83CC95581A71CACF000DE4A9 /* AppDelegate.m in Sources */,
-				83CC955B1A71CACF000DE4A9 /* FirstViewController.m in Sources */,
+				83CC957D1A71CBC8000DE4A9 /* MapViewController.m in Sources */,
+				83CC95801A71CC38000DE4A9 /* PictureDetails.m in Sources */,
+				83CC955B1A71CACF000DE4A9 /* PhotosViewController.m in Sources */,
 				83CC95551A71CACF000DE4A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

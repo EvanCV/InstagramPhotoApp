@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  PhotosAppMe
 //
 //  Created by Shannon Beck on 1/22/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface PhotosViewController : UIViewController
 
 
 @end

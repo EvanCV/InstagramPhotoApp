@@ -13,10 +13,9 @@
 @interface PictureDetails : NSObject
 
 @property NSString *photoUrl;
-//@property MKMapItem *mapItem;
 @property BOOL hasBeenFavorited;
 @property float latitude;
 @property float longitude;
-@property ImageCollectionViewCell *cellular;
+@property UIImage *heartImage;
 
 @end

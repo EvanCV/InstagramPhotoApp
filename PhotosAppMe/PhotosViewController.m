@@ -10,7 +10,7 @@
 #import "PictureDetails.h"
 #import "ImageCollectionViewCell.h"
 
-@interface PhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
+@interface PhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSMutableArray *photosArray;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -26,7 +26,6 @@
 {
     [super viewDidLoad];
     self.photosArray = [[NSMutableArray alloc]init];
-
 }
 
 -(void)parser:(NSString *)searchCriteria
@@ -55,6 +54,7 @@
          }
 
         // [self reloadInputViews];
+         [self pictureHasBeenFavorited:self.photosArray];
          [self.collectionView reloadData];
      }];
 
@@ -83,48 +83,55 @@
     NSDictionary *dd2 = dict[@"images"];
     NSDictionary *dd3 = dd2[@"standard_resolution"];
     picture.photoUrl = dd3[@"url"];
+    //picture.heartImage = [[UIImageView alloc]init];
+    picture.heartImage = nil;
 
     [self.photosArray addObject:picture];
 }
 
+-(void)pictureHasBeenFavorited : (NSMutableArray *)thisArray
+{
+    for (PictureDetails *picture in thisArray)
+    {
+        if (picture.hasBeenFavorited)
+        {
+            picture.heartImage = [UIImage imageNamed:@"heart.png"];
+        }
+    }
+}
+
+
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     PictureDetails *picture = [self.photosArray objectAtIndex:indexPath.row];
-    picture.cellular = cell;
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
 
     NSURL *imageURL = [NSURL URLWithString:picture.photoUrl];
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    picture.cellular.cellImageView.image = [UIImage imageWithData:imageData];
+    cell.cellImageView.image = [UIImage imageWithData:imageData];
 
-    if (picture.hasBeenFavorited)
-    {
-        picture.cellular.accessoryImageView.image = [UIImage imageNamed:@"heart.png"];
-    }
+    cell.accessoryImageView.image = picture.heartImage;
 
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // If you need to use the touched cell, you can retrieve it like so
     self.path = indexPath;
-    PictureDetails *picture = [self.photosArray objectAtIndex:self.path.row];
-    picture.hasBeenFavorited = YES;
-    picture.cellular.accessoryImageView.image = [UIImage imageNamed:@"heart.png"];
-    //[self.collectionView reloadData];
-
 }
 
-//- (IBAction)doubleTapped:(UITapGestureRecognizer *)sender
-//{
-//    PictureDetails *picture = [self.photosArray objectAtIndex:self.path.row];
-//    picture.hasBeenFavorited = YES;
-//    //ImageCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:self.path];
-//    [self.collectionView reloadData];
-//
-//}
+
+- (IBAction)gestureRecognizer:(id)sender
+{
+    PictureDetails *picture = [self.photosArray objectAtIndex:self.path.row];
+    picture.hasBeenFavorited = YES;
+
+    [self pictureHasBeenFavorited:self.photosArray];
+
+    [self.collectionView reloadData];
+}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

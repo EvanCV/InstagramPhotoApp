@@ -12,10 +12,12 @@
 
 @interface PictureDetails : NSObject
 
+- (instancetype)initWithDictionary: (NSDictionary *) dictionary;
+
 @property NSString *photoUrl;
 @property BOOL hasBeenFavorited;
-@property float latitude;
-@property float longitude;
+@property NSString *latitude;
+@property NSString *longitude;
 @property UIImage *heartImage;
 
 @end

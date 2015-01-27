@@ -10,6 +10,7 @@
 
 @interface PhotosViewController : UIViewController
 
+@property NSMutableArray *favoritesArray;
 
 @end
 

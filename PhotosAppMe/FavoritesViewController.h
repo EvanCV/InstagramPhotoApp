@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotosViewController.h"
+#import "ImageCollectionViewCell.h"
+#import "PictureDetails.h"
 
 @interface FavoritesViewController : UIViewController
 

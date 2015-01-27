@@ -13,4 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *cellImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *accessoryImageView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *favoritesImageView;
+
 @end

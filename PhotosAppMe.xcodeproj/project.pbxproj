@@ -19,7 +19,8 @@
 		83CC95801A71CC38000DE4A9 /* PictureDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC957F1A71CC38000DE4A9 /* PictureDetails.m */; };
 		83CC95821A71CE8E000DE4A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CC95811A71CE8E000DE4A9 /* MapKit.framework */; };
 		83CC95851A71E344000DE4A9 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */; };
-		83CC95871A71FA9F000DE4A9 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CC95861A71FA9F000DE4A9 /* heart.png */; };
+		94D764EB1A732CDC00B28150 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D764EA1A732CDC00B28150 /* heart.png */; };
+		94D764ED1A74820000B28150 /* favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D764EC1A74820000B28150 /* favorites.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,8 @@
 		83CC95811A71CE8E000DE4A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		83CC95831A71E344000DE4A9 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		83CC95841A71E344000DE4A9 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
-		83CC95861A71FA9F000DE4A9 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = ../../../../heart.png; sourceTree = "<group>"; };
+		94D764EA1A732CDC00B28150 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		94D764EC1A74820000B28150 /* favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = favorites.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				83CC957F1A71CC38000DE4A9 /* PictureDetails.m */,
 				83CC957B1A71CBC8000DE4A9 /* MapViewController.h */,
 				83CC957C1A71CBC8000DE4A9 /* MapViewController.m */,
+				94D764EC1A74820000B28150 /* favorites.plist */,
 				83CC95621A71CACF000DE4A9 /* Images.xcassets */,
 				83CC95641A71CACF000DE4A9 /* LaunchScreen.xib */,
 				83CC95521A71CACF000DE4A9 /* Supporting Files */,
@@ -122,8 +125,8 @@
 		83CC95521A71CACF000DE4A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83CC95861A71FA9F000DE4A9 /* heart.png */,
 				83CC95531A71CACF000DE4A9 /* Info.plist */,
+				94D764EA1A732CDC00B28150 /* heart.png */,
 				83CC95541A71CACF000DE4A9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -226,7 +229,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CC95871A71FA9F000DE4A9 /* heart.png in Resources */,
+				94D764EB1A732CDC00B28150 /* heart.png in Resources */,
+				94D764ED1A74820000B28150 /* favorites.plist in Resources */,
 				83CC95611A71CACF000DE4A9 /* Main.storyboard in Resources */,
 				83CC95661A71CACF000DE4A9 /* LaunchScreen.xib in Resources */,
 				83CC95631A71CACF000DE4A9 /* Images.xcassets in Resources */,
@@ -444,6 +448,7 @@
 				83CC95771A71CACF000DE4A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83CC95781A71CACF000DE4A9 /* Build configuration list for PBXNativeTarget "PhotosAppMeTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +457,7 @@
 				83CC957A1A71CACF000DE4A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

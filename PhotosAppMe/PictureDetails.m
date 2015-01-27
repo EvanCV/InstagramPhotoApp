@@ -10,4 +10,21 @@
 
 @implementation PictureDetails
 
+- (instancetype)initWithDictionary: (NSDictionary *) dictionary
+{
+    self = [super init];
+    if (self)
+    {
+        self.photoUrl = dictionary[@"PhotoURL"];
+        if (dictionary[@"Latitude"] && dictionary[@"Longitude"])
+        {
+            self.longitude = dictionary[@"Longitude"];
+            self.latitude = dictionary[@"Latitude"];
+        }
+
+    }
+    return self;
+}
+
+
 @end
